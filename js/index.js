@@ -2,7 +2,42 @@
 
 
 
-// addEventListeners 
+//on Keys 'L' & 'A'  load Page Code 
+
+function runOnKeys(func, ...codes) {
+    let pressed = new Set();
+
+    document.addEventListener('keydown', function(event) {
+      pressed.add(event.code);
+
+      for (let code of codes) { 
+        if (!pressed.has(code)) {
+          return;
+        }
+      }
+
+      pressed.clear();
+
+      func();
+    });
+
+    document.addEventListener('keyup', function(event) {
+      pressed.delete(event.code);
+    });
+
+  }
+
+  runOnKeys(
+    () => ShowPage (console.log('welcome to the FunBus !'))
+    ,
+    "KeyL",
+    "KeyA",
+    
+    
+  );
+
+
+  function ShowPage () {
 
 //window
 window.addEventListener('load', (event) => {
@@ -99,3 +134,4 @@ const newAT = document.createElement("H2");                 // Create <> node
 var textnode = document.createTextNode("Lambda");          // Create a 'method' node
 newAT.appendChild(textnode);                               // Append the text to <>
 document.querySelector('footer p').appendChild(newAT);          //  Append child 
+}
