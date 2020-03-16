@@ -23,11 +23,6 @@ window.addEventListener('scroll', () => {
   section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
 })
 
-window.onload = function() {
-    document.qu("footer").focus();
-  };
-
-//nav
 
 // // background if Function @media 
 
@@ -48,8 +43,10 @@ var x = window.matchMedia("(max-width: 700px)")
 myFunction(x) // Call listener function  'run time'
 x.addListener(myFunction)// Attach listener function  'state change'
 
+
+// nav 
 const navClk = document.querySelectorAll('a')
-event.stopPropagation();
+
 
 navClk.forEach(link => {
     link.addEventListener('click', (event) => {
@@ -84,9 +81,9 @@ function myFunction2(x) {
 var x = window.matchMedia("(max-width: 700px)")
 myFunction2(x) // Call listener function  'run time'
 x.addListener(myFunction2)// Attach listener function  'state changes'
-event.stopPropagation();
 
-//bus img
+
+// bus img
 
 const busImg = document.querySelector("header img")
 busImg.addEventListener('dblclick', (event) => {
@@ -94,9 +91,6 @@ busImg.addEventListener('dblclick', (event) => {
     event.target.style.borderRadius = '20px'
 
 });
-
-
-
 
 
 //footer appendChild 
