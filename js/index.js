@@ -1,6 +1,32 @@
 
+//onFocus 
+
+// var focused_element = null;
+// if (
+//     document.hasFocus() &&
+//     document.activeElement !== document.body &&
+//     document.activeElement !== document.documentElement
+// ) {
+//     focused_element = document.activeElement;
+//     console.log("focused_element");
+// }
 
 
+// const imgFocus = document.querySelector("body > div.container.home > section:nth-child(2) > div.img-content > img");
+
+
+
+// imgFocus.addEventListener('onfocus', (event) => {
+// //     function myFocus(x)
+// //     x.style.border = "yellow";
+// console.log('hello');
+//  })
+
+
+// focusMethod = function getFocus() {           
+//     imgFocus.focus();
+//     console.log(imgFocus);
+//   }
 
 //on Keys 'F,U,N' load Page Code 
 
@@ -33,13 +59,17 @@ runOnKeys(
     "KeyF",
     "KeyU",
     "KeyN",
-    
+
 
 
 );
 
 
 function ShowPage() {
+
+
+
+
 
     //window
     window.addEventListener('load', (event) => {
